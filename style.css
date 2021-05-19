@@ -1,0 +1,33 @@
+body {
+  font-family: "Raleway", sans-serif;
+  margin: 3em;
+}
+/* Supprime les puces */
+li {
+display: inline-block;
+}
+
+svg {
+  width: 15px;
+  height: 15px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav li {
+  margin: 3vw;
+}
+
+#HeaderSignup {
+  color: #0065FC;
+  font-weight: 600;
+}
