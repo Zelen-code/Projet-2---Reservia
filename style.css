@@ -1,33 +1,66 @@
 body {
+
   font-family: "Raleway", sans-serif;
-  margin: 3em;
-}
-/* Supprime les puces */
-li {
-display: inline-block;
-}
 
-svg {
-  width: 15px;
-  height: 15px;
-}
+  --blue: #0065FC;
+  --bluelight: #DEEBFF;
+  --grey: #F2F2F2;
+  --white: #FFFFFF;
+  --black: #000000;
 
-header {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1440px;
-  margin: auto;
 }
 
 a {
+
+  color: inherit;
   text-decoration: none;
+
 }
 
-nav li {
-  margin: 3vw;
+.header {
+
+  display: grid;
+  align-items: center;
+
 }
 
-#HeaderSignup {
-  color: #0065FC;
-  font-weight: 600;
+.header-image {
+
+  grid-area: logo;
+
 }
+
+.header-nav {
+
+  grid-area: navbar;
+
+}
+
+.header-nav-link {
+
+  padding: 1em;
+  cursor: pointer;
+
+}
+
+.header-signup {
+
+  display: flex;
+  align-items: center;
+  grid-area: button;
+  
+}
+
+@media screen and (min-width: 48em) {
+
+  .header {
+    grid-template-columns: auto 1fr auto auto;
+    grid-template-areas: "logo . navbar button";
+
+  }
+
+
+
+
+
+
