@@ -1,0 +1,176 @@
+header a {
+
+  padding: 2em;
+  text-decoration: none;
+
+}
+
+.header {
+
+  display: grid;
+  align-items: center;
+
+}
+
+.header-image {
+
+  grid-area: logo;
+  padding: 1em;
+
+}
+
+.header-nav {
+
+  display: flex;
+  grid-area: nav;
+
+}
+
+.header-nav-link {
+
+  color: inherit;
+  cursor: pointer;
+
+}
+
+.header-signup {
+
+  grid-area: button;
+  color: #0065FC;
+  font-weight: bold;
+  
+}
+
+@media screen and (max-width: 48em) {
+
+  .header {
+
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "logo . button" "nav nav nav";
+
+  }
+
+  .header-image {
+
+    order: 0;
+
+  }
+
+  .header-signup {
+
+    order: 1;
+
+  }
+
+  .header-signup:hover {
+
+    border-top: solid blue;
+
+  }
+
+  .header-nav {
+
+    order: 2;
+
+  }
+
+  .header-nav-link {
+
+    min-width: 45%;
+
+  }
+
+  .header-nav-link:hover {
+
+    border-bottom: solid blue;
+  
+  }
+
+}
+
+@media screen and (min-width: 48em) {
+
+  .header {
+
+    grid-template-areas: "logo . nav button";
+    grid-template-columns: auto 1fr auto auto;
+
+  }
+
+  .header-nav-link:hover {
+
+    border-top: solid blue;
+    color: #0065FC;
+
+  }
+
+  .header-signup:hover {
+
+    border-top: solid blue;
+
+  }
+
+}
+
+
+/* footer */
+
+
+footer {
+
+  display: flex;
+  background: #F2F2F2;
+  width: 1440px;
+  padding: 1em;
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: auto;
+
+}
+
+.footer-column {
+
+  width: 50%;
+  padding: 3em;
+
+}
+
+footer h3 {
+
+  padding-left: 0.5em;
+
+}
+
+
+footer a {
+
+  display: flex;
+  color: inherit;
+  text-decoration: none;
+  padding: 0.5rem;
+
+}
+
+footer a:hover {
+
+  text-decoration: underline;
+
+}
+
+@media (max-width: 48em) {
+
+  footer {
+
+    flex-direction: column;
+    padding: 0;
+    text-align: left;
+
+  }
+
+  .footer-column {
+
+    width: 80%;
+
+  }
+
+}
