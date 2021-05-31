@@ -5,6 +5,13 @@ header a {
 
 }
 
+.search header p {
+
+  margin: auto;
+  padding-bottom: 1rem;
+
+}
+
 .header {
 
   display: grid;
@@ -35,13 +42,14 @@ header a {
 
 .header-signup {
 
+  order: 1;
   grid-area: button;
   color: #0065FC;
   font-weight: bold;
   
 }
 
-@media screen and (max-width: 48em) {
+@media screen and (max-width: 1199px) {
 
   .header {
 
@@ -53,18 +61,6 @@ header a {
   .header-image {
 
     order: 0;
-
-  }
-
-  .header-signup {
-
-    order: 1;
-
-  }
-
-  .header-signup:hover {
-
-    border-top: solid blue;
 
   }
 
@@ -80,15 +76,9 @@ header a {
 
   }
 
-  .header-nav-link:hover {
-
-    border-bottom: solid blue;
-  
-  }
-
 }
 
-@media screen and (min-width: 48em) {
+@media screen and (min-width: 768px) {
 
   .header {
 
@@ -99,14 +89,16 @@ header a {
 
   .header-nav-link:hover {
 
-    border-top: solid blue;
+    border-top: solid;
     color: #0065FC;
 
   }
 
   .header-signup:hover {
 
-    border-top: solid blue;
+    border-top: solid;
+    color: #0065FC;
+
 
   }
 
@@ -157,7 +149,7 @@ footer a:hover {
 
 }
 
-@media (max-width: 48em) {
+@media (max-width: 1199px) {
 
   footer {
 
