@@ -33,23 +33,25 @@ header a {
 
 }
 
-.header-nav-link {
-
-  color: inherit;
-  cursor: pointer;
-
-}
-
 .header-signup {
 
   order: 1;
   grid-area: button;
   color: #0065FC;
   font-weight: bold;
+  border-top: solid white;
+
+}
+
+.header-nav-link {
+
+  color: inherit;
+  cursor: pointer;
+  border-top: solid white;
   
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 768px) {
 
   .header {
 
@@ -70,10 +72,28 @@ header a {
 
   }
 
+  .header-nav {
+
+    display: flex;
+    justify-content: space-around;
+
+  }
+
   .header-nav-link {
 
-    min-width: 45%;
+    border-bottom: solid white;
 
+  }
+
+  .header-nav-link:hover {
+
+    border-bottom: solid blue;
+
+  }
+
+  .header-signup:hover {
+
+    border-top: solid blue;
   }
 
 }
@@ -89,16 +109,13 @@ header a {
 
   .header-nav-link:hover {
 
-    border-top: solid;
-    color: #0065FC;
+    border-top: solid blue;
 
   }
 
   .header-signup:hover {
 
-    border-top: solid;
-    color: #0065FC;
-
+    border-top: solid blue;
 
   }
 

@@ -44,7 +44,6 @@ header h1 {
 
 .search-form img:hover {
 
-  height: 25px;
   background-color: #FFC0CB;
 
 }
@@ -169,6 +168,8 @@ nav h2 {
 .search-results img:hover {
 
   background-color: #FFC0CB;
+  transform: rotate(360deg);
+  transition-duration: 0.6s;
 
 }
 
@@ -196,7 +197,7 @@ nav h2 {
 }
 
 
-/* section hébergements */
+/* hébergements */
 
 
 aside img {
@@ -292,7 +293,8 @@ p {
 
 .hosting-main-card-section {
 
-  margin: auto;
+  grid-column: 1/-1;
+  margin: 0;
   
 }
 
@@ -304,24 +306,38 @@ p {
 
 }
 
+.chart-line-icon {
 
-/* section aside */
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
 
+}
+
+
+/* aside */
+
+.stars-aside {
+
+  padding-left: 1em;
+
+}
 
 .hosting-aside {
 
+  background-color: #F2F2F2;
+  border-radius: 1.5rem;
+  padding: 2.5rem;
   display: grid;
-  row-gap: 2rem;
+  row-gap: 1rem;
   align-items: start;
   grid-template-rows: auto repeat(3, 1fr);
 
 }
 
-aside h2 {
+.hosting-aside h2 {
 
   margin: 0;
-  display: flex;
-  justify-content: space-between;
 
 }
 
@@ -329,8 +345,14 @@ aside h2 {
 
   display: flex;
   align-items: stretch;
-  height: 100%;
+  height: 8rem;
   overflow: auto;
+  text-decoration: none;
+  color: #000000;
+  border-radius: 1.25rem;
+  box-shadow: 1px 1px 12px #555;
+  padding: 0.2rem;
+  line-height: 1rem;
 
 }
 
@@ -357,6 +379,7 @@ aside h2 {
   display: flex;
   flex-direction: column;
   flex: 1;
+  background-color: #FFFFFF;
 
 }
 
@@ -366,7 +389,27 @@ aside h2 {
 
 }
 
-@media screen and(max-width: 1199px) {
+.hosting-aside-card h3 {
+
+  font-size: 1rem;
+  font-weight: bold;
+  padding-left: 1em;
+
+}
+
+.hosting-aside-card p {
+
+  margin-top: 0;
+
+}
+
+.hosting-aside-card {
+
+  margin-top: 2rem;
+
+}
+
+@media screen and (max-width: 1199px) {
 
   .hosting {
 
@@ -381,12 +424,6 @@ aside h2 {
     grid-template-rows: auto 10rem;
     column-gap: 2rem;
     grid-row-start: 1;
-
-  }
-
-  .hosting-aside h2 {
-
-    grid-column: 1/-1;
 
   }
 
@@ -432,6 +469,149 @@ aside h2 {
   }
 
 }
+
+
+/* activités à Marseille */
+
+
+.activities {
+
+  display: grid;
+  column-gap: 2rem;
+  margin: 4rem 0;
+
+}
+
+.activities h2 {
+
+  grid-column: 1/-1;
+
+}
+
+.activities a {
+
+  box-shadow: 0 0 20px #0000002e;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition-duration: 0.1s;
+  text-decoration: none;
+  color: inherit;
+
+}
+
+.activities a:hover {
+
+  transform: scale(1.01);
+
+}
+
+.activities img {
+
+  position: relative;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+.activities h3 {
+
+  margin: 1.2rem 1.5rem;
+
+}
+
+
+@media screen and (min-width: 1199px) {
+
+  .activities {
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 14rem 2rem 2rem 2rem 14rem;
+
+  }
+
+  .activity-card-1 {
+
+    grid-row: 2/7;
+    grid-column: 1/2;
+
+  }
+
+  .activity-card-2 {
+
+  grid-column: 2/3;
+  grid-row: 2/5;
+
+}
+
+  .activity-card-3 {
+
+  grid-column: 3/4;
+  grid-row: 2/7;
+
+}
+
+  .activity-card-4 {
+
+    grid-column: 4/5;
+    grid-row: 2/3;
+
+  }
+
+  .activity-card-5 {
+
+    grid-column: 2/3;
+    grid-row: 6/7;
+
+  }
+
+  .activity-card-6 {
+
+    grid-column: 4/5;
+    grid-row: 4/7;
+
+  }
+
+  @media (max-width: 1100px) {
+
+  .activity-card {
+
+    row-gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 12rem 12rem;
+  
+  }
+
+}
+
+@media (max-width: 991px) {
+  
+  .activity-card {
+
+    row-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 12rem 12rem 12rem;
+  
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .activity-card {
+
+    row-gap: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 12rem 12rem 12rem 12rem 12rem 12rem;
+
+  }
+
+}
+
+
 
 
 
