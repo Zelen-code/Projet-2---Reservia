@@ -1,3 +1,9 @@
+header img {
+
+  margin-left: 1rem;
+
+}
+
 header a {
 
   padding: 2em;
@@ -9,6 +15,7 @@ header a {
 
   margin: auto;
   padding-bottom: 1rem;
+  padding-left: 0rem;
 
 }
 
