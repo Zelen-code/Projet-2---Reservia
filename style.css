@@ -248,6 +248,7 @@ p {
   display: grid;
   column-gap: 2rem;
   grid-template-columns: 6fr 3fr;
+  max-width: 1440px;
 
 }
 
@@ -260,6 +261,9 @@ p {
   column-gap: 2rem;
   row-gap: 2rem;
   height: 38rem;
+  position: relative;
+  max-width: 50rem;
+
 }
 
 .hosting-main h2 {
@@ -348,12 +352,14 @@ p {
   row-gap: 1rem;
   align-items: start;
   grid-template-rows: auto repeat(3, 1fr);
+  height: 37rem;
+  width: 20rem;
 
 }
 
 .hosting-aside h2 {
 
-margin: 0;
+  margin: 0;
 
 }
 
@@ -366,7 +372,7 @@ margin: 0;
   text-decoration: none;
   color: #000000;
   border-radius: 1.25rem;
-  box-shadow: 1px 1px 12px #555;
+  box-shadow: 1px 1px 12px grey;
   padding: 0.2rem;
   line-height: 1rem;
 
@@ -490,71 +496,115 @@ margin: 0;
 /* activités à Marseille */
 
 
-.activities {
+.activity {
 
   display: grid;
   column-gap: 2rem;
   margin: 4rem 0;
+  width: 81rem;
+  grid-row-gap: 2rem;
+  
+}
+
+.activity a {
+
+  box-shadow: 0 0 20px #0000002e;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition-duration: 0.1s;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: black;
 
 }
 
-.activities h2 {
+.activity a:hover {
+
+  transform: scale(1.1);
+
+}
+
+.activity-card {
+
+  position: relative;
+  flex: 1;
+
+}
+
+.activity img {
+
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
+}
+
+.activity h2 {
 
   grid-column: 1/-1;
 
 }
 
-.activities a {
+@media (min-width: 1199px) {
 
-  display: grid;
-  box-shadow: 0 0 20px #0000002e;
-  border-radius: 1rem;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition-duration: 0.1s;
-  text-decoration: none;
-  color: inherit;
-
-}
-
-.activities a:hover {
-
-  transform: scale(1.01);
-
-}
-
-.activities img {
-
-  position: relative;
-  flex: 1;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-
-}
-
-.activities h3 {
-
-  margin: 1.2rem 1.5rem;
-
-}
-
-
-@media screen and (min-width: 1199px) {
-
-  .activities {
+  .activity {
 
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto 14rem 2rem 2rem 2rem 14rem;
 
   }
 
-  
+  .activity-1 {
 
-  @media screen and (max-width: 1100px) {
+    grid-row: 1/3;
+    grid-column: 1;
 
-  a .activity-card {
+  }
+
+  .activity-2 {
+
+    grid-column: 2;
+    grid-row: 1/2;
+    height: 12rem;
+
+  }
+
+  .activity-3 {
+
+    grid-column: 2;
+    grid-row: 2/2;
+    height: 9rem;
+
+  }
+
+  .activity-4 {
+
+    grid-column: 3;
+    grid-row: 1/3;
+
+  }
+
+  .activity-5 {
+
+    grid-column: 4;
+    grid-row: 1/2;
+
+  }
+
+  .activity-6 {
+
+    grid-column: 4;
+    grid-row: 2/2;
+
+  }
+
+}
+
+@media screen (min-width: 991px) and (max-width: 1199px) {
+
+  section .activity {
 
     row-gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
@@ -566,12 +616,11 @@ margin: 0;
 
 @media screen (min-width: 650px) and (max-width: 991px) {
   
-  a .activity-card {
+  section .activity {
 
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
     row-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 12rem 12rem 12rem;
   
   }
 
@@ -579,16 +628,17 @@ margin: 0;
 
 @media screen (max-width: 650px) {
 
-  a .activity-card {
+  section .activity {
 
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
     row-gap: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 12rem 12rem 12rem 12rem 12rem 12rem;
 
   }
 
 }
+
+
 
 
 
