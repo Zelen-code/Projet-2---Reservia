@@ -4,16 +4,16 @@
 @font-face {
 
     font-family: 'Raleway';
-    src: url('Raleway-Regular.eot');
-    src: url('Raleway-Regular.eot?#iefix') format('embedded-opentype'),
-         url('Raleway-Regular.woff2') format('woff2'),
-         url('Raleway-Regular.woff') format('woff'),
-         url('Raleway-Regular.ttf') format('truetype'),
-         url('Raleway-Regular.svg#Raleway-Regular') format('svg');
-         font-weight: normal;
-         font-style: normal;
-         font-display: swap;
-    
+    src: url('Raleway-Thin.eot');
+    src: url('Raleway-Thin.eot?#iefix') format('embedded-opentype'),
+        url('Raleway-Thin.woff2') format('woff2'),
+        url('Raleway-Thin.woff') format('woff'),
+        url('Raleway-Thin.ttf') format('truetype'),
+        url('Raleway-Thin.svg#Raleway-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+
 }
 
 body {
@@ -107,6 +107,12 @@ button {
   display: flex;
   flex-wrap: wrap;
   margin-top: 2rem;
+
+}
+
+#filter-title {
+
+  padding-left: 0;
 
 }
 
@@ -508,6 +514,7 @@ p {
   margin: 1rem 0;
   width: 81rem;
   grid-row-gap: 2rem;
+  padding-top: 1rem;
   
 }
 
@@ -609,33 +616,7 @@ p {
 
 }
 
-@media (min-width: 991px) and (max-width: 1199px) {
-
-  .activity {
-
-    grid-template-columns: repeat(3, 1fr);
-  
-  }
-
-  .activity-1 {
-
-    grid-column: 1;
-    grid-row: 1/2;
-    height: 12rem;
-
-  }
-
-  .activity-2 {
-
-    grid-column: 1;
-    grid-row: 2/2;
-    height: 12rem;
-
-  }
-
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   
   h2 {
 
@@ -701,15 +682,17 @@ p {
   .activity {
 
     grid-template-columns: 1fr;
-    height: 70rem;
-    width: 75%;
+    height: 95rem;
+    width: 60%;
     margin-top: 3rem;
+    margin-left: 2rem;
 
   }
 
   h2 {
 
     margin-top: 7rem;
+    margin-left: 2rem;
 
   }
 
@@ -718,6 +701,13 @@ p {
   .hosting-aside-card {
 
     height: 90%;
+
+  }
+
+  .hosting-main {
+
+    background: none;
+
   }
 
 }

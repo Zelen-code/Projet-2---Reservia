@@ -16,7 +16,12 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="header-and-footer.css">
 
-   
+   <!-- police -->
+
+
+    <link rel="preload" href="Raleway-Thin.woff2" as="font" type="font/woff2" crossorigin>
+
+
     <!--titre du site -->
 
 
@@ -38,8 +43,8 @@
     <header class="header">
       <img class="header-image" src="images/logo/Reservia.svg" alt="logo-Reservia">
       <nav class="header-nav">
-        <a class="header-nav-link" href="#hosting" data-active="true">Hébergements</a>
-        <a class="header-nav-link" href="#activity" data-active="false">Activités</a>
+        <a class="header-nav-link" href="#hosting" >Hébergements</a>
+        <a class="header-nav-link" href="#activity">Activités</a>
       </nav>
         <a class="header-signup" href="#">S'inscrire</a>
     </header>
@@ -71,7 +76,7 @@
 
 
       <nav class="filters-section">
-        <h2>Filtres</h2>
+        <h2 id="filter-title">Filtres</h2>
         <div class="filter">
           <img src="images/icon/money-bill-wave-solid.svg" alt="filtre économique">
           <h2>Économique</h2>
@@ -110,7 +115,7 @@
 
 
       <div class="hosting-main">
-        <h2>Hébergements à Marseille</h2>
+        <h2 id="hosting">Hébergements à Marseille</h2>
         <a class="hosting-main-card" href="#">
           <div class="hosting-main-card-section">
             <img src="images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Auberge de la Cannebière">
@@ -261,12 +266,12 @@
 
     <!--activités à Marseille -->
 
-      <h2>Activités à Marseille</h2>
+      <h2 id="activity">Activités à Marseille</h2>
       <section class="activity">
         <a href="#" class="activity-1">
           <div class="activity-card">
             <img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" 
-                 alt="Vieux Port">
+            alt="Vieux Port">
           </div>
           <h3>Vieux port</h3> 
         </a>
