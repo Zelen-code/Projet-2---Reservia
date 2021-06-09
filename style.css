@@ -40,7 +40,7 @@ header h1 {
 
 }
 
-.search-form {
+.search-form-1 {
 
   display: inline-flex;
   max-width: 100%;
@@ -48,7 +48,15 @@ header h1 {
 
 }
 
-.search-form img {
+.search-form-2 {
+
+  display: inline-flex;
+  max-width: 100%;
+  overflow: auto;
+
+}
+
+.search-form-1 img {
 
   background-color: #F2F2F2;
   padding: 1rem 1.25rem;
@@ -58,9 +66,20 @@ header h1 {
 
 }
 
-.search-form img:hover {
+.search-form-2 img {
+
+  background-color: #F2F2F2;
+  padding: 1rem 1.25rem;
+  border-radius: 1rem 0 0 1rem;
+  width: 20px;
+  height: 20px;
+
+}
+
+.search-form-1 img:hover {
 
   background-color: #FFC0CB;
+  cursor: pointer;
 
 }
 
@@ -201,9 +220,24 @@ nav h2 {
 
 }
 
+.magnifying-glass {
+
+  cursor: pointer;
+  transform: rotate(90deg);
+  transform: scalex(-1);
+
+}
+
 @media screen and (max-width: 768px) {
 
-  .search-form {
+  .search-form-1 {
+
+    display: flex;
+    width: 100%;
+
+  }
+
+  .search-form-2 {
 
     display: flex;
     width: 100%;
@@ -213,6 +247,22 @@ nav h2 {
   nav h2 {
 
     width: 100%;
+
+  }
+
+  .search-form-1 {
+
+    visibility: hidden;
+
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+
+  .search-form-2 {
+
+    visibility: hidden;
 
   }
 
@@ -338,6 +388,12 @@ p {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
+
+}
+
+.hosting-aside-card:hover {
+
+  transform: scale(1.1);
 
 }
 
@@ -472,6 +528,13 @@ p {
 
   }
 
+  #activity {
+
+    margin-top: 2rem;
+    padding-top: 0rem;
+
+  }
+
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -498,6 +561,29 @@ p {
     grid-template-columns: 1fr;
     width: 60%;
     height: 100%;
+
+  }
+
+  .search-place {
+
+    width: 11rem;
+
+  }
+
+  .hosting-aside {
+
+    width: 15rem;
+  }
+
+  .hosting-main {
+
+    width: 15rem;
+
+  }
+
+  .activity a {
+
+    width: 15rem;
 
   }
 
@@ -618,6 +704,12 @@ p {
 
 @media (min-width: 768px) and (max-width: 1199px) {
   
+  .hosting-main {
+
+    background: none;
+
+  }
+
   h2 {
 
     margin-top: 10rem;
@@ -704,11 +796,6 @@ p {
 
   }
 
-  .hosting-main {
-
-    background: none;
-
-  }
 
 }
 
@@ -724,10 +811,6 @@ p {
 
 
   
-
-
-
-
 
 
 
