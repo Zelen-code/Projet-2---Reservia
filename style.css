@@ -78,7 +78,6 @@ header h1 {
 
 .search-form-1 img:hover {
 
-  background-color: #FFC0CB;
   cursor: pointer;
 
 }
@@ -168,7 +167,7 @@ nav img:hover {
 
   transform: rotate(360deg);
   transition-duration: 0.6s;
-  background-color: #FFC0CB;
+  background-color: #FFFFFF;
   
 }
 
@@ -203,14 +202,6 @@ nav h2 {
   width: 20px;
   height: 20px;
   padding: 0.5rem;
-
-}
-
-.search-results img:hover {
-
-  background-color: #FFC0CB;
-  transform: rotate(360deg);
-  transition-duration: 0.6s;
 
 }
 
@@ -370,7 +361,6 @@ p {
 
 .hosting-main-card-section {
 
-  grid-column: 1/-1;
   margin: 0;
   
 }
@@ -798,22 +788,3 @@ p {
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
