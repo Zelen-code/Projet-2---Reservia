@@ -4,13 +4,13 @@
 @font-face {
 
     font-family: 'Raleway';
-    src: url('Raleway-Thin.eot');
-    src: url('Raleway-Thin.eot?#iefix') format('embedded-opentype'),
-        url('Raleway-Thin.woff2') format('woff2'),
-        url('Raleway-Thin.woff') format('woff'),
-        url('Raleway-Thin.ttf') format('truetype'),
-        url('Raleway-Thin.svg#Raleway-Thin') format('svg');
-    font-weight: 100;
+    src: url('Raleway-ExtraLight.eot');
+    src: url('Raleway-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('Raleway-ExtraLight.woff2') format('woff2'),
+        url('Raleway-ExtraLight.woff') format('woff'),
+        url('Raleway-ExtraLight.ttf') format('truetype'),
+        url('Raleway-ExtraLight.svg#Raleway-ExtraLight') format('svg');
+    font-weight: 200;
     font-style: normal;
     font-display: swap;
 
@@ -18,15 +18,14 @@
 
 body {
 
-  font-family: 'Raleway', sans-serif;
-  
+  font-family: 'Raleway', Arial, sans-serif; 
+
 }
 
 main {
 
   max-width: 1440px;
   margin: 1rem;
-  padding: 1rem;
 
 }
 
@@ -34,39 +33,14 @@ main {
 /* recherche */
 
 
-header h1 {
-
-  margin-bottom: 1rem;
-
-}
-
-.search-form-1 {
+.search-form-1,.search-form-2 {
 
   display: inline-flex;
-  max-width: 100%;
   overflow: auto;
 
 }
 
-.search-form-2 {
-
-  display: inline-flex;
-  max-width: 100%;
-  overflow: auto;
-
-}
-
-.search-form-1 img {
-
-  background-color: #F2F2F2;
-  padding: 1rem 1.25rem;
-  border-radius: 1rem 0 0 1rem;
-  width: 20px;
-  height: 20px;
-
-}
-
-.search-form-2 img {
+.search-form-1 img,.search-form-2 img {
 
   background-color: #F2F2F2;
   padding: 1rem 1.25rem;
@@ -221,22 +195,9 @@ nav h2 {
 
 @media screen and (max-width: 768px) {
 
-  .search-form-1 {
+  .search-form-1,.search-form-2 {
 
     display: flex;
-    width: 100%;
-
-  }
-
-  .search-form-2 {
-
-    display: flex;
-    width: 100%;
-
-  }
-
-  nav h2 {
-
     width: 100%;
 
   }
@@ -247,9 +208,15 @@ nav h2 {
 
   }
 
+  nav h2 {
+
+    width: 100%;
+
+  }
+
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
 
   .search-form-2 {
 
@@ -314,10 +281,36 @@ p {
 
 }
 
-.hosting-main h2 {
+@media (min-width: 992px) {
 
-  grid-column: 1/-1;
+  .hosting-main h2 {
+
   margin: 0;
+  grid-column: 1/4;
+
+  }
+
+  .hosting-main {
+
+    padding-bottom: 0;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .hosting-main h2 {
+
+    grid-column: 1/3;
+    margin: 0;
+
+  }
+
+  .hosting-main {
+
+    margin-bottom: 10rem;
+
+  }
 
 }
 
@@ -389,6 +382,7 @@ p {
 
 
 /* aside */
+
 
 .stars-aside {
 
@@ -532,6 +526,7 @@ p {
   .hosting-main {
 
     grid-template-columns: repeat(2, 1fr);
+    padding-top: 1rem;
 
   }
 
@@ -548,9 +543,15 @@ p {
 
   .hosting-main {
 
-    grid-template-columns: 1fr;
     width: 60%;
     height: 100%;
+
+  }
+
+  .hosting-main h2 {
+
+    margin-top: 1rem;
+    margin-left: 1rem;
 
   }
 
@@ -692,18 +693,13 @@ p {
 
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 769px) and (max-width: 1199px) {
   
   .hosting-main {
 
     background: none;
 
-  }
-
-  h2 {
-
-    margin-top: 10rem;
-  }
+  }   
 
   .activity {
 
@@ -785,6 +781,5 @@ p {
     height: 90%;
 
   }
-
 
 }
